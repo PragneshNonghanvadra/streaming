@@ -1,0 +1,25 @@
+{
+  "name": "fwk",
+  "private": true,
+  "version": "1.0.0",
+  "description": "framework",
+  "main": "./dist/index.js",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && swc src -s -d dist --strip-leading-paths && tsc && npm run copy:static-files",
+    "build:watch": "npm run clean && swc src -s -d dist --strip-leading-paths --watch &  npm run copy:static-files & tsc --watch",
+    "copy:static-files": "cp -R ./src/styles/static/ ./dist/styles/static/"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@swc/cli": "^0.3.12",
+    "@swc/core": "^1.5.7",
+    "chokidar": "^3.6.0",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@nextui-org/react": "^2.3.6",
+    "framer-motion": "^11.2.4"
+  }
+}

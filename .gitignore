@@ -1,0 +1,9 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+
+#dependencies
+node_modules

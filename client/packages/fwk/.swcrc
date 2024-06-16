@@ -1,0 +1,27 @@
+{
+  "jsc": {
+    "parser": {
+      "syntax": "typescript",
+      "tsx": true,
+      "decorators": true
+    },
+    "target": "es2016",
+    "transform": {
+      "react": {
+        "runtime": "automatic",
+        "development": false,
+        "throwIfNamespace": true,
+        "useBuiltIns": false,
+        "useSpread": false
+      }
+    }
+  },
+  "module": {
+    "type": "nodenext",
+    "strict": true,
+    "strictMode": true,
+    "lazy": false,
+    "noInterop": false
+  },
+  "minify": false,
+}
